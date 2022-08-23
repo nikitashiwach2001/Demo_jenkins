@@ -8,9 +8,9 @@ pipeline {
 	        MINOR = '0'
 	        //Orchestrator Services
 	        UIPATH_ORCH_URL = "https://cloud.uipath.com/"
-	        UIPATH_ORCH_LOGICAL_NAME = "anupaminc"
-	        UIPATH_ORCH_TENANT_NAME = "Descriptify"
-	        UIPATH_ORCH_FOLDER_NAME = "Default"
+	        UIPATH_ORCH_LOGICAL_NAME = "nikita"
+	        UIPATH_ORCH_TENANT_NAME = "nikita"
+	        UIPATH_ORCH_FOLDER_NAME = "IT"
 	    }
 	
 
@@ -58,13 +58,11 @@ pipeline {
 	            steps {
 	                echo "Deploying ${BRANCH_NAME} to UAT "
 	                UiPathDeploy (
-	                packagePath: "Output\\${env.BUILD_NUMBER}",
-	                orchestratorAddress: "${UIPATH_ORCH_URL}",
-	                orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}",
-	                folderName: "${UIPATH_ORCH_FOLDER_NAME}",
-	                environments: 'DEV',
+				orchestratorAddress: "${cloud.uipath.com/ssstkwxnjg/nikita/orchestrator_}",
+	                orchestratorTenant: "${nikita}",
+	                folderName: "${IT}",
 	                //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey']
-	                credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'APIUserKey'), 
+	                credentials: Token(accountName: "${nikita}", credentialsId: '6uwmnQcZmM3oAemyWSf2KapIf2s2U9hlatNtnsGYh3RW9'), 
 					traceLevel: 'None',
 					entryPointPaths: 'Main.xaml'
 	
