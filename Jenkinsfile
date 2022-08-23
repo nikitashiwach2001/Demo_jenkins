@@ -54,22 +54,22 @@ pipeline {
 	
 
 	         // Deploy Stages
-	        stage('Deploy to UAT') {
-	            steps {
-	                echo "Deploying ${BRANCH_NAME} to UAT "
-	                UiPathDeploy (
-				orchestratorAddress: "${cloud.uipath.com/ssstkwxnjg/nikita/orchestrator_}",
-	                orchestratorTenant: "${nikita}",
-	                folderName: "${IT}",
-	                //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey']
-	                credentials: Token(accountName: "${nikita}", credentialsId: '6uwmnQcZmM3oAemyWSf2KapIf2s2U9hlatNtnsGYh3RW9'), 
-					traceLevel: 'None',
-					entryPointPaths: 'Main.xaml'
+// 	        stage('Deploy to UAT') {
+// 	            steps {
+// 	                echo "Deploying ${BRANCH_NAME} to UAT "
+// 	                UiPathDeploy (
+// 				orchestratorAddress: "${cloud.uipath.com/ssstkwxnjg/nikita/orchestrator_}",
+// 	                orchestratorTenant: "${nikita}",
+// 	                folderName: "${IT}",
+// 	                //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey']
+// 	                credentials: Token(accountName: "${nikita}", credentialsId: '6uwmnQcZmM3oAemyWSf2KapIf2s2U9hlatNtnsGYh3RW9'), 
+// 					traceLevel: 'None',
+// 					entryPointPaths: 'Main.xaml'
 	
 
-	        )
-	            }
-	        }
+// 	        )
+// 	            }
+// 	        }
 	
 
 	
