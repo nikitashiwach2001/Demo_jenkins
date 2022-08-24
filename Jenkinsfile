@@ -62,7 +62,7 @@ pipeline {
 	                orchestratorTenant: "${nikita}",
 	                folderName: "${IT}",
 	                //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey']
-	                credentials: Token(accountName: "${Nikita Shiwach}", credentialsId: '6uwmnQcZmM3oAemyWSf2KapIf2s2U9hlatNtnsGYh3RW9'), 
+	                credentials: Token(accountName: "${Nikita}", credentialsId: '6uwmnQcZmM3oAemyWSf2KapIf2s2U9hlatNtnsGYh3RW9'), 
 					traceLevel: 'None',
 					entryPointPaths: 'Main.xaml'
 	
