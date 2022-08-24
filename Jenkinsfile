@@ -58,7 +58,7 @@ pipeline {
 	            steps {
 	                echo "Deploying ${main} to UAT "
 	                UiPathDeploy (
-				orchestratorAddress: "${https://cloud.uipath.com/ssstkwxnjg/nikita/orchestrator_}",
+				orchestratorAddress: "${cloud.uipath.com/ssstkwxnjg/nikita/orchestrator_}",
 	                orchestratorTenant: "${nikita}",
 	                folderName: "${IT}",
 	                //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey']
